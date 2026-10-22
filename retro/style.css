@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Michroma&display=swap');
+
+/* Targets the body */
+body {
+    background-color: #09090b;
+    color: #e4e4e7;
+
+    font-family: Michroma, Arial, sans-serif;
+
+    margin: 0;
+    line-height: 1.6;
+}
+
+div {
+    max-width: 800px;
+    margin: auto;
+}
+
+a {
+    color: #e4e4e7;
+}
+
+header {
+    background-color: #18181b;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #ff2d95;
+    
+    padding: 25px;
+}
