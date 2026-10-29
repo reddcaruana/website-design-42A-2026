@@ -62,3 +62,49 @@ header h1 {
     width: 560px;
     height: 400px;
 }
+
+/****************************************** TRAFFIC LIGHTS ******************************************/
+
+.traffic-light .base {
+    background-color: #203747;
+
+    width: 100px;
+    height: 16px;
+    margin: auto;
+
+    border-radius: 0 0 8px 8px;
+}
+
+.traffic-light .pole {
+    width: 24px;
+    height: 65px;
+    background-color: #354f60;
+    margin: auto;
+}
+
+.traffic-light .housing {
+    background-color: #203747;
+    border: 5px solid #354f60;
+    border-radius: 20px;
+
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+}
+
+.traffic-light .light {
+    width: 66px;
+    aspect-ratio: 1 / 1; /* make it square 1:1 */
+
+    border: 5px solid #142833;
+    border-radius: 100%;
+}
+.traffic-light .red {
+    background-color: #ed655c;
+}
+.traffic-light .amber {
+    background-color: #f8cd54;
+}
+.traffic-light .green {
+    background-color: #63ac72;
+}
