@@ -52,4 +52,38 @@ ul {
 
 .rounded {
     border-radius: 0.25rem;
+    overflow: hidden;
+    /* removes the parts that SHOULD NOT fit */
+}
+
+/****************** CARDS ******************/
+.card {
+    background-color: #202b35;
+    border: 1px solid #718493;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-image {
+    display: block;
+    width: 100%;
+
+    /* ensures that the image is scaled properly */
+    aspect-ratio: 4 / 2;
+
+    /* crops the parts of the image that don't fit */
+    object-fit: cover;
+    object-position: center;
+}
+
+.horizontal-card {
+    display: flex;
+    align-items: center;
+}
+
+.horizontal-card .card-image {
+    width: 33%;
+    aspect-ratio: 4 / 3;
 }
