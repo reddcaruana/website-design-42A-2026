@@ -78,6 +78,11 @@ ul {
     object-position: center;
 }
 
+/* if the card is featured, change the image size */
+.card.featured .card-image {
+    aspect-ratio: 4 / 1;
+}
+
 .horizontal-card {
     display: flex;
     align-items: center;
@@ -86,4 +91,62 @@ ul {
 .horizontal-card .card-image {
     width: 33%;
     aspect-ratio: 4 / 3;
+}
+
+/****************** LAYOUT ******************/
+
+.flex-collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* > means direct child */
+.flex-collection > .card {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 15rem;
+    /* never go past 15rem */
+}
+
+.grid-gallery {
+    display: grid;
+    gap: 1rem;
+
+    /* define a template */
+    grid-template-columns: repeat(3, 1fr);
+    /* 1fr -> 1 fraction */
+}
+
+/* Both classes need to present on the same element */
+.grid-gallery.responsive {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    
+    /* min() finds the minimum between two numbers */
+    /* 100% can be less than 15rem (240px)
+        so it can take priority */
+    /* minmax() keeps a number between two values
+        in this case, between the space size and 1fr */
+}
+
+.grid-gallery .featured {
+    grid-column: span 2;
+    /* takes up 2 columns */
+}
+
+/****************** TRANSITIONS ******************/
+
+.lift {
+    box-shadow: 0 2px 5px #ffffff20; 
+    /* values: x, y, blur radius, color with alpha */
+
+    transition: translate 180ms ease, box-shadow 180ms ease;
+    /* property, duration, transition style */
+}
+
+.lift:hover {
+    translate: 0 -0.25rem;
+    /* move up by 4px */
+
+    box-shadow: 0 5px 12px #ffffff40;
 }
